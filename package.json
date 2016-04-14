@@ -1,0 +1,19 @@
+{
+  "name": "mp3skull-fb-bot",
+  "version": "1.0.0",
+  "description": "Handles messages to the fansite and response with API URL",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.13.4",
+    "http": "0.0.0",
+    "nconf": "^0.8.4",
+    "path": "^0.12.7",
+    "request": "^2.71.0",
+    "underscore": "^1.8.3"
+  }
+}

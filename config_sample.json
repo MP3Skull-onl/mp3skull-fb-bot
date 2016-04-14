@@ -1,0 +1,5 @@
+{
+  "FB_TOKEN": "<your facebook fanpage token>",
+  "PORT": 1234,
+  "HOST": "localhost"
+}
