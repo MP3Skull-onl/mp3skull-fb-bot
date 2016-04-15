@@ -11,6 +11,8 @@ If a user write a YouTube URL to the fansite - he will automatically get the Con
 
 * Edit config_sample.json
 * Rename config_sample.json to config.json
+  - YouTube API url should be something like "http://[your domain]/youtube-search?q=" the search query would be added to this string
+  - YouTube API url should return an array of objects [{id: '[YouTube ID]'}, {id: '...'}]
 * run "npm install"
 * run "node index.js"
 * Create nginx config & restart nginx
@@ -20,3 +22,4 @@ If a user write a YouTube URL to the fansite - he will automatically get the Con
 * https://mp3skull.onl/
 * https://www.facebook.com/mp3skull.onl
   - Write a pm with a youtube url to this fanpage
+  - Write a pm "search: [video name]" to get a result for that
