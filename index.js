@@ -1,3 +1,4 @@
+var bodyParser = require('body-parser');
 var path = require('path');
 var express = require('express');
 
@@ -16,6 +17,9 @@ var webOptions = {
 };
 
 var app = express();
+
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: false}));
 
 var router = require('./router').Router;
 app.use('/', router);
