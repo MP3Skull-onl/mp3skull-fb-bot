@@ -26,11 +26,19 @@ bot.handle = function(sender, text) {
     bot.send(sender, 'You can find your download here:' + "\r\n" + 'https://mp3skull.onl/api/youtube/frame/#/?id=' + isYouTube);
   } else if(text.toLowerCase().indexOf('search:') !== -1) {
     
-    var song = text.substring(text.toLowerCase().indexOf('search:')+('search:').length, text.length);
+    var song = text.substring(text.toLowerCase().indexOf('search:')+('search:').length, text.length).trim();
     bot.find(song.trim(), function(ytId) {
       
       bot.send(sender, 'The best result for "'+song+'" is:' + "\r\n" + 'https://mp3skull.onl/api/youtube/frame/#/?id=' + ytId);
     });
+  } else if(text == 'help') {
+    
+    bot.send(sender, 
+    'Hello, '+
+    "\r\n\r\n"+
+    'use "search: [your search]" to search for a video'+
+    "\r\n\r\n"+
+    'or just send a youtube url to convert it.');
   }
 };
 
@@ -44,7 +52,7 @@ bot.isYouTube = function(text) {
 bot.find = function(song, cb) {
   
   request({
-    url: apiOptions.youtubeApi+song,
+    url: appOptions.youtubeApi + song,
     method: 'GET'
   }, function(error, response, body) {
     if (error) {
