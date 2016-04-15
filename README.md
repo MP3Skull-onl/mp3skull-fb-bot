@@ -19,3 +19,4 @@ If a user write a YouTube URL to the fansite - he will automatically get the Con
 
 * https://mp3skull.onl/
 * https://www.facebook.com/mp3skull.onl
+  - Write a pm with a youtube url to this fanpage
