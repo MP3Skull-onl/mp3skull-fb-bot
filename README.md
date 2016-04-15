@@ -5,7 +5,7 @@ If a user write a YouTube URL to the fansite - he will automatically get the Con
 
 * "Reviewed" Facebook App
 * SetUp -> https://developers.facebook.com/docs/messenger-platform/quickstart
-* * Use Route https://<your domain>/webhook/ for the webhook url
+  - Use Route https://<your domain>/webhook/ for the webhook url
 
 # SetUp
 
