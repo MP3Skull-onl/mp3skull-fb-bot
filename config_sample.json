@@ -2,5 +2,6 @@
   "FB_TOKEN": "<your facebook fanpage token>",
   "FB_BOT_TOKEN": "<your facebook webhook token>",
   "PORT": 1234,
-  "HOST": "localhost"
+  "HOST": "localhost",
+  "YOUTUBE_API": "<your youtube api url>"
 }

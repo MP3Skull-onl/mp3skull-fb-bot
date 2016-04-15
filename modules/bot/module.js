@@ -11,7 +11,8 @@ nconf
 
 var appOptions = {
 	fbToken: nconf.get("FB_TOKEN"),
-	botToken: nconf.get("FB_BOT_TOKEN")
+	botToken: nconf.get("FB_BOT_TOKEN"),
+	youtubeApi: nconf.get("YOUTUBE_API")
 };
 
 var bot = {};
@@ -43,7 +44,7 @@ bot.isYouTube = function(text) {
 bot.find = function(song, cb) {
   
   request({
-    url: 'https://mp3skull.onl/api/youtube/search?q='+song,
+    url: apiOptions.youtubeApi+song,
     method: 'GET'
   }, function(error, response, body) {
     if (error) {
