@@ -31,7 +31,7 @@ bot.handle = function(sender, text) {
       
       bot.send(sender, 'The best result for "'+song+'" is:' + "\r\n" + 'https://mp3skull.onl/api/youtube/frame/#/?id=' + ytId);
     });
-  } else if(text == 'help') {
+  } else if(text.toLowerCase().indexOf('--help') !== -1 || text.match(/(hello)|(hi)|(good (evening|morning|day))/ig) !== null) {
     
     bot.send(sender, 
     'Hello, '+
@@ -39,6 +39,9 @@ bot.handle = function(sender, text) {
     'use "search: [your search]" to search for a video'+
     "\r\n\r\n"+
     'or just send a youtube url to convert it.');
+  } else {
+    
+    bot.send(sender, "Sorry, i don't understand you. Please use '--help' to get a list of available requests.");
   }
 };
 
